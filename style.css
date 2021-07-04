@@ -1,0 +1,484 @@
+:root {
+    --mainBg: hsl(218, 28%, 13%);
+    --footerBg: hsl(216, 53%, 9%);
+    --testimonialBg: hsl(219, 30%, 18%);
+    --btnBg: hsl(176, 68%, 64%);
+    --btnBgInside: hsl(198, 60%, 50%);
+    --error: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --fontBody: 14px;
+    --bodyFont: 'Open Sans', sans-serif;
+    --headingFont: 'Raleway', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    /* background-color: green; */
+    background: var(--testimonialBg);
+    color: var(--white);
+    position: relative;
+    font-size: var(--fontBody);
+    font-family: var(--bodyFont);
+    font-weight: 400;
+    line-height: 1.8em;
+    z-index: 0;
+}
+
+header {
+    width: 100%;
+    padding: .8em;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--white);
+    font-family: var(--headingFont);
+}
+
+.landing-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.landing-page::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./images/bg-curvy-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.banner {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    max-width: 70ch;
+    margin-bottom: 4em;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+}
+
+.content p {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, var(--btnBg), var(--btnBgInside));
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.action {
+    padding: .8em 4em;
+}
+
+.activities,
+.productive,
+.testimonials {
+    background: var(--mainBg);
+    width: 100%;
+}
+
+.activities {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.card {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.icon,
+.card-title {
+    margin-bottom: .5em;
+}
+
+.productive {
+    padding: 2em;
+    text-align: left;
+}
+
+.productive .title {
+    font-size: 1.2rem;
+}
+
+.productive a {
+    text-decoration: none;
+    color: var(--btnBg);
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--btnBg);
+}
+
+.productive a span {
+    margin-left: 4px;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 5em 3em;
+    padding-bottom: 20em;
+}
+
+.testimonial {
+    background: var(--testimonialBg);
+    padding: 1em;
+}
+
+.testimonial p {
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    gap: 10px;
+    margin-top: 1.2em;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.name,
+p.job {
+    font-size: .6rem;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    background: var(--footerBg);
+}
+
+.subscription {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    right: 0;
+    width: 85%;
+    max-width: 700px;
+    text-align: center;
+    padding: 2em 1.5em;
+    background: var(--testimonialBg);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    box-shadow: 0 2.1px 2.5px rgba(0, 0, 0, 0.019), 0 5.9px 6.8px rgba(0, 0, 0, 0.032), 0 14.2px 15.3px rgba(0, 0, 0, 0.05), 0 47px 50px rgba(0, 0, 0, 0.11);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.subscription h3,
+.subscription p {
+    margin-bottom: .5em;
+    line-height: 1.5em;
+}
+
+form {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2em;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.submit {
+    height: 40px;
+    font-size: 10px;
+}
+
+.footer {
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.foot-nav {
+    padding-top: 15em;
+}
+
+.foot-nav .logo {
+    width: 100px;
+    margin-bottom: 1em;
+}
+
+.col p {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.col a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.about-links,
+.contact-links {
+    margin-top: 2.5em;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+ion-icon {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+}
+
+ion-icon:hover {
+    color: var(--btnBg);
+    cursor: pointer;
+}
+
+@media screen and (min-width:700px) {
+    header {
+        padding: 1em 4em;
+    }
+    .menu {
+        gap: 3em;
+    }
+    .landing-page {
+        height: 100vh;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .banner {
+        height: 700px;
+    }
+    .landing-page::after {
+        top: 30vh;
+        background-image: url(./images/bg-curvy-desktop.svg);
+    }
+    .content {
+        width: 100%;
+        max-width: 75ch;
+        margin-bottom: 4em;
+    }
+    .title {
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1em;
+        word-spacing: 2px;
+    }
+    .content p {
+        line-height: 1.3em;
+        font-size: 1.2rem;
+    }
+    .btn {
+        border: none;
+        outline: none;
+        background: linear-gradient(45deg, var(--btnBg), var(--btnBgInside));
+        color: var(--white);
+        cursor: pointer;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .action {
+        padding: 1em 5em;
+        font-size: 1rem;
+    }
+    .activities {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5em;
+        padding-left: 10em;
+        padding-right: 10em;
+    }
+    .card {
+        max-width: 40em;
+    }
+    .productive {
+        display: flex;
+        align-items: center;
+        padding-right: 4em;
+        padding-left: 4em;
+    }
+    .productive .banner {
+        width: 50%;
+    }
+    .productive .content {
+        width: 50%;
+    }
+    .productive .title {
+        font-size: 2.2rem;
+    }
+    .testimonials {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3em;
+    }
+    .testimonial {
+        padding: 2em;
+        max-width: 400px;
+    }
+    .footer {
+        padding-left: 6em;
+        padding-right: 6em;
+    }
+    .subscription h3 {
+        font-size: 1.5rem;
+    }
+    form {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5em;
+    }
+    input {
+        width: 70%;
+    }
+    .submit {
+        width: 30%;
+        font-size: 1rem;
+    }
+    .row {
+        display: flex;
+        align-items: flex-start;
+        gap: 2em;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 3em;
+    }
+    .col {
+        max-width: 60ch;
+        margin-top: 0;
+    }
+}
