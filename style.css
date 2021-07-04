@@ -419,6 +419,7 @@ ion-icon:hover {
         gap: 5em;
         padding-left: 10em;
         padding-right: 10em;
+        padding-top: 8em;
     }
     .card {
         max-width: 40em;
